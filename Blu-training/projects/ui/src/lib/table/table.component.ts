@@ -11,11 +11,8 @@ import { CommonModule } from '@angular/common';
 })
 export class TableComponent {
 
-  public tableData: TableData[] = [
-    { firstname: 'John', lastname: 'Doe', email: 'john@example.com' },
-    { firstname: 'Mary', lastname: 'Moe', email: 'mary@example.com' },
-    { firstname: 'July', lastname: 'Dooley', email: 'july@example.com' }
-  ];
+  @Input() tableData: TableData[]=[];
+  
   constructor() { }
 
 
