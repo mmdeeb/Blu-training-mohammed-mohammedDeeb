@@ -13,17 +13,17 @@ import { DataToTableService } from './services/data-to-table.service';
 })
 export class AppComponent {
 
-  public tableData: TableData[] = [];
+  public tableData1: TableData[] = [];
   title = 'Blu-training';
 
   constructor(private dataToTableService: DataToTableService) {
-    this.getTableData();
+    this.getTableData1();
   }
 
 
-  getTableData(): void {
-    this.dataToTableService.getTableData().subscribe(data => {
-      this.tableData = data;
+  getTableData1(): void {
+    this.dataToTableService.getTableData1().subscribe(data => {
+      this.tableData1 = data;
     });
   }
 }
