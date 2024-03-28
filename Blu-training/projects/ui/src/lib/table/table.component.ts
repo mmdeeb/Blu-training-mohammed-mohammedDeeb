@@ -3,13 +3,14 @@ import { TableData } from './models/table-data';
 import { CommonModule } from '@angular/common';
 import { FilterPipe } from 'pipes';
 import { TableConfig } from './models/table-config';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'ui-table', 
   standalone: true,
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css'],
-  imports: [CommonModule]
+  imports: [CommonModule,FormsModule]
 })
 export class TableComponent implements OnInit {
 

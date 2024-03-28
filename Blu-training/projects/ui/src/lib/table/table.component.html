@@ -14,3 +14,28 @@
         </tr>
     </tbody>
 </table>
+
+<div>
+    <input *ngFor="let column of config.columns" 
+           [(ngModel)]="filters[column]"
+           (ngModelChange)="applyFilter()"
+           placeholder="Filter on {{ column }}" 
+           [name]="column" />
+  </div>
+
+  <table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Firstname</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of filteredRows">
+            <td>{{ item.firstname}}</td>
+            <td>{{ item.lastname }}</td>
+            <td>{{ item.email }}</td>
+        </tr>
+    </tbody>
+</table>
