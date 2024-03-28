@@ -13,20 +13,11 @@ import { DataToTableService } from './services/data-to-table.service';
 })
 export class AppComponent {
 
-  public tableData1: TableData[] = [];
   public tableData: TableConfig = { columns: [], rows: [] };
   title = 'Blu-training';
 
   constructor(private dataToTableService: DataToTableService) {
-    this.getTableData1();
     this.getTableData();
-  }
-
-
-  getTableData1(): void {
-    this.dataToTableService.getTableData1().subscribe(data => {
-      this.tableData1 = data;
-    });
   }
 
   getTableData(): void {

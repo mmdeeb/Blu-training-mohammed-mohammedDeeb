@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { TableData } from './models/table-data';
 import { CommonModule } from '@angular/common';
 import { FilterPipe } from 'pipes';
 import { TableConfig } from './models/table-config';
@@ -14,7 +13,6 @@ import { FormsModule } from '@angular/forms';
 })
 export class TableComponent implements OnInit {
 
-  @Input() tableData: TableData[]=[];
   @Input() config: TableConfig ={ columns: [], rows: [] };
 
   filters: {[key: string]: string} = {};
