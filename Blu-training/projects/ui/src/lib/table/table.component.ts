@@ -17,7 +17,6 @@ export class TableComponent implements OnInit {
 
   filters: {[key: string]: string} = {};
   filteredRows: any[]=[];
-  private filterPipe = new FilterPipe();
   
   constructor() { }
   
@@ -26,13 +25,5 @@ export class TableComponent implements OnInit {
     this.filteredRows = this.config.rows;
   }
 
-  applyFilter(): void {
-    this.filteredRows = this.config.rows;
-    for (const [key, value] of Object.entries(this.filters)) {
-      if (value) {
-        this.filteredRows = this.filterPipe.transform(this.filteredRows, key, value);
-      }
-    }
-  }
 
 }
