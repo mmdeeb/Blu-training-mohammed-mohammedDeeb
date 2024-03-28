@@ -4,3 +4,4 @@
 
 export * from './lib/pipes.service';
 export * from './lib/pipes.component';
+export * from './lib/filter/filter.pipe';
