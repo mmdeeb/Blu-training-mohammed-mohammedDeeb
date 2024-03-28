@@ -12,7 +12,9 @@ import { CommonModule } from '@angular/common';
 export class TableComponent {
 
   @Input() tableData: TableData[]=[];
-  
+
+  @Input() config: { columns: string[]; rows: any[] }={ columns: [], rows: [] };
+
   constructor() { }
 
 
