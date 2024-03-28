@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TableComponent, TableConfig } from "ui";
-import { TableData } from 'ui';
 import { DataToTableService } from './services/data-to-table.service';
 
 @Component({

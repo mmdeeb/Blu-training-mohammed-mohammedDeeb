@@ -1,42 +1,84 @@
+/* Base table styles */
 .table {
   width: 100%;
-  max-width: 100%;
   margin-bottom: 1rem;
   background-color: transparent;
   border-collapse: collapse;
+  border-color: #dee2e6; 
 }
 
+/* Shared cell styles */
 .table th,
-.table td {
+.table td,
+.filter-container input {
   padding: 0.75rem;
+  border: 1px solid #dee2e6;
   vertical-align: top;
-  border-top: 1px solid #dee2e6;
 }
 
+/* Header styles */
 .table thead th {
   vertical-align: bottom;
   color: #dee2e6;
-  border-bottom: 2px solid #dee2e6;
-  background-color: #111111; 
-  text-align: left; 
+  border-bottom: 2px solid;
+  background-color: #111;
+  text-align: left;
 }
 
+/* Zebra striping for rows */
+.table tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #e9ecef;
+}
+
+/* Body borders */
 .table tbody + tbody {
-  border-top: 2px solid #dee2e6;
+  border-top: 2px solid;
 }
 
+/* Filter container */
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.75rem;
+  background-color: #111;
+  border-bottom: 2px solid;
+}
+
+/* Filter inputs */
+.filter-container input {
+  flex-grow: 1;
+  margin: 0.25rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.filter-container input:focus {
+  outline: none;
+  border-color: #5b9bd5;
+  box-shadow: 0 0 3px #5b9bd5;
+}
+
+/* Responsive design adjustments */
 @media (max-width: 768px) {
+  .filter-container,
+  .filter-container input,
   .table-responsive {
     display: block;
+  }
+
+  .filter-container input {
+    width: 100%;
+    margin: 0.25rem 0;
+  }
+
+  .table-responsive {
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
-}
-.table tbody tr:nth-of-type(odd) {
-  background-color: #f2f2f2; /* Lighter grey for odd rows */
-}
-
-.table tbody tr:nth-of-type(even) {
-  background-color: #e9ecef; /* Slightly darker grey for even rows */
 }

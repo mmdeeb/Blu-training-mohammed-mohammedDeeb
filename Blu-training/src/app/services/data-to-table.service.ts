@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { TableConfig, TableData } from 'ui';
+import { TableConfig } from 'ui';
 @Injectable({
   providedIn: 'root'
 })
