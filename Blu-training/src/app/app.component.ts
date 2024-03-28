@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TableComponent } from "ui";
+import { TableComponent, TableConfig } from "ui";
 import { TableData } from 'ui';
 import { DataToTableService } from './services/data-to-table.service';
 
@@ -14,10 +14,12 @@ import { DataToTableService } from './services/data-to-table.service';
 export class AppComponent {
 
   public tableData1: TableData[] = [];
+  public tableData: TableConfig = { columns: [], rows: [] };
   title = 'Blu-training';
 
   constructor(private dataToTableService: DataToTableService) {
     this.getTableData1();
+    this.getTableData();
   }
 
 
@@ -26,4 +28,11 @@ export class AppComponent {
       this.tableData1 = data;
     });
   }
+
+  getTableData(): void {
+    this.dataToTableService.getTableData().subscribe(data => {
+      this.tableData = data;
+    });
+  }
+
 }
