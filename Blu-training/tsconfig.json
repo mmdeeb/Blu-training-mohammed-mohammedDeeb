@@ -20,6 +20,9 @@
     "module": "ES2022",
     "useDefineForClassFields": false,
     "paths": {
+      "pipes": [
+        "./dist/pipes"
+      ],
       "ui": [
         "./dist/ui"
       ]
