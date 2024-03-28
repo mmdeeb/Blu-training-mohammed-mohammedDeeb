@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css'],
-  imports: [CommonModule,FormsModule]
+  imports: [CommonModule,FormsModule,FilterPipe]
 })
 export class TableComponent implements OnInit {
 
@@ -19,8 +19,9 @@ export class TableComponent implements OnInit {
 
   filters: {[key: string]: string} = {};
   filteredRows: any[]=[];
-
-  constructor(private filterPipe: FilterPipe) { }
+  private filterPipe = new FilterPipe();
+  
+  constructor() { }
   
   
   ngOnInit(): void {
