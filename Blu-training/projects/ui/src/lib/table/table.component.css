@@ -4,25 +4,24 @@
   margin-bottom: 1rem;
   background-color: transparent;
   border-collapse: collapse;
-  border-color: #dee2e6; 
+  border-color: #dee2e6;
 }
 
 /* Shared cell styles */
 .table th,
-.table td,
-.filter-container input {
+.table td {
   padding: 0.75rem;
   border: 1px solid #dee2e6;
   vertical-align: top;
+  text-align: left;
 }
 
 /* Header styles */
 .table thead th {
   vertical-align: bottom;
-  color: #dee2e6;
-  border-bottom: 2px solid;
+  border-bottom: 2px solid #dee2e6;
   background-color: #111;
-  text-align: left;
+  color: #dee2e6;
 }
 
 /* Zebra striping for rows */
@@ -35,26 +34,28 @@
 }
 
 /* Body borders */
-.table tbody + tbody {
-  border-top: 2px solid;
+.table tbody+tbody {
+  border-top: 2px solid #dee2e6;
 }
 
 /* Filter container */
 .filter-container {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Adjust the number 3 based on the actual number of columns */
   background-color: #111;
-  border-bottom: 2px solid;
+  padding: 0;
+  /* Remove padding if the inputs should stretch fully */
 }
 
 /* Filter inputs */
 .filter-container input {
-  flex-grow: 1;
-  margin: 0.25rem;
-  padding: 0.5rem;
-  border-radius: 4px;
-  box-sizing: border-box;
+  padding: 0.75rem;
+  margin: 0;
+  /* Remove margins if the inputs should stretch fully */
+  border: 1px solid #dee2e6;
+  border-radius: 0;
+  /* Align with the column's border-radius */
 }
 
 .filter-container input:focus {
@@ -65,20 +66,25 @@
 
 /* Responsive design adjustments */
 @media (max-width: 768px) {
-  .filter-container,
-  .filter-container input,
-  .table-responsive {
+  .filter-container {
     display: block;
   }
 
   .filter-container input {
     width: 100%;
     margin: 0.25rem 0;
+    /* Adjust margin to fit mobile view */
   }
 
   .table-responsive {
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+  }
+
+  /* If the table headers stack, the filters should stack too */
+  .filter-container {
+    grid-template-columns: 1fr;
+    /* Stack the filters on small screens */
   }
 }

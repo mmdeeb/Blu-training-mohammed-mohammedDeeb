@@ -1,11 +1,9 @@
 <div class="filter-container">
-    <input *ngFor="let column of config.columns" 
-           [(ngModel)]="filters[column]"
-           placeholder="Filter on {{ column }}" 
-           [name]="column" />
-  </div>
+    <input *ngFor="let column of config.columns" [(ngModel)]="filters[column]" placeholder="Filter on {{ column }}"
+        [name]="column" />
+</div>
 
-  <table class="table">
+<table class="table">
     <thead>
         <tr>
             <th scope="col" *ngFor="let column of config.columns">{{ column }}</th>
