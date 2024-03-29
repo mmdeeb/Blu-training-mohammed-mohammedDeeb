@@ -8,7 +8,7 @@
 }
 
 /* Shared cell styles */
-.table th,
+.table .lables,
 .table td {
   padding: 0.75rem;
   border: 1px solid #dee2e6;
@@ -17,7 +17,7 @@
 }
 
 /* Header styles */
-.table thead th {
+.table thead .lables {
   vertical-align: bottom;
   border-bottom: 2px solid #dee2e6;
   background-color: #111;
@@ -40,15 +40,13 @@
 
 /* Filter container */
 .filter-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* Adjust the number 3 based on the actual number of columns */
+  background-color: #fff;
   padding: 0;
-  /* Remove padding if the inputs should stretch fully */
 }
 
 /* Filter inputs */
 .filter-container input {
+  width: 90%;
   padding: 0.75rem;
   margin: 0.50rem;
 
@@ -67,11 +65,10 @@
 /* Responsive design adjustments */
 @media (max-width: 768px) {
   .filter-container {
+
     display: block;
   }
-
-  .filter-container input {
-    width: 100%;
+    .filter-container input {
     margin: 0.25rem ;
     
   }
