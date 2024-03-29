@@ -72,8 +72,8 @@
 
   .filter-container input {
     width: 100%;
-    margin: 0.25rem 0;
-    /* Adjust margin to fit mobile view */
+    margin: 0.25rem ;
+    
   }
 
   .table-responsive {
@@ -82,9 +82,5 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  /* If the table headers stack, the filters should stack too */
-  .filter-container {
-    grid-template-columns: 1fr;
-    /* Stack the filters on small screens */
-  }
+  
 }
