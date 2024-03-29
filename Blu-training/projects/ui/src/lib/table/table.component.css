@@ -43,7 +43,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   /* Adjust the number 3 based on the actual number of columns */
-  background-color: #111;
   padding: 0;
   /* Remove padding if the inputs should stretch fully */
 }
@@ -51,10 +50,11 @@
 /* Filter inputs */
 .filter-container input {
   padding: 0.75rem;
-  margin: 0;
+  margin: 0.50rem;
+
   /* Remove margins if the inputs should stretch fully */
   border: 1px solid #dee2e6;
-  border-radius: 0;
+  border-radius: 0.5rem;
   /* Align with the column's border-radius */
 }
 
