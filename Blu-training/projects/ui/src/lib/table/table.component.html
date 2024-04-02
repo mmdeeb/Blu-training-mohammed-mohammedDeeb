@@ -4,8 +4,8 @@
             <th class="filter-container" *ngFor="let column of config.columns" > <input [(ngModel)]="filters[column]" placeholder="Filter on {{ column }}"
                 [name]="column" /></th>
         </tr>
-        <tr>
-            <th class="lables" scope="col" *ngFor="let column of config.columns">{{ column }}</th>
+        <tr class="main-haeder">
+            <th class="lables" *ngFor="let column of config.columns">{{ column }}</th>
         </tr>
     </thead>
     <tbody>

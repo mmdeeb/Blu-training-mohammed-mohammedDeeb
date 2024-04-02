@@ -11,9 +11,10 @@
 .table .lables,
 .table td {
   padding: 0.75rem;
-  border: 1px solid #dee2e6;
   vertical-align: top;
-  text-align: left;
+  text-align: left; 
+  border-bottom: 0.5px solid #dee2e6;
+
 }
 
 /* Header styles */
@@ -24,14 +25,7 @@
   color: #dee2e6;
 }
 
-/* Zebra striping for rows */
-.table tbody tr:nth-child(odd) {
-  background-color: #f2f2f2;
-}
 
-.table tbody tr:nth-child(even) {
-  background-color: #e9ecef;
-}
 
 /* Body borders */
 .table tbody+tbody {
@@ -60,6 +54,12 @@
   outline: none;
   border-color: #5b9bd5;
   box-shadow: 0 0 3px #5b9bd5;
+}
+
+
+/* Hover effect on table body rows */
+.table tbody tr:hover {
+  background-color: #d1e6dd; /* Change this color to your preferred hover color for rows */
 }
 
 /* Responsive design adjustments */
