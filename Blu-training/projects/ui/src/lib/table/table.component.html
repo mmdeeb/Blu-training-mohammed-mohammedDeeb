@@ -1,15 +1,16 @@
 <table class="table">
     <thead>
         <tr>
-            <th class="filter-container" *ngFor="let column of config.columns" > <input [(ngModel)]="filters[column]" placeholder="Filter on {{ column }}"
-                [name]="column" /></th>
+            <th class="filter-container" colspan="3"> 
+                <input [(ngModel)]="generalFilter" placeholder="Search" [name]="generalFilter" />
+              </th>
         </tr>
         <tr class="main-haeder">
             <th class="lables" *ngFor="let column of config.columns">{{ column }}</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let item of filteredRows |filter:filters">
+        <tr *ngFor="let item of filteredRows |filter:generalFilter">
             <td>{{ item.firstname}}</td>
             <td>{{ item.lastname }}</td>
             <td>{{ item.email }}</td>

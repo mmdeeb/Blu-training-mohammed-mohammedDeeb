@@ -15,7 +15,7 @@ export class TableComponent implements OnInit {
 
   @Input() config: TableConfig ={ columns: [], rows: [] };
 
-  filters: {[key: string]: string} = {};
+  generalFilter: string = '';
   filteredRows: any[]=[];
   
   constructor() { }

@@ -40,7 +40,7 @@
 
 /* Filter inputs */
 .filter-container input {
-  width: 90%;
+  width: 95%;
   padding: 0.75rem;
   margin: 0.50rem;
 
@@ -64,10 +64,6 @@
 
 /* Responsive design adjustments */
 @media (max-width: 768px) {
-  .filter-container {
-
-    display: block;
-  }
     .filter-container input {
     margin: 0.25rem ;
     
