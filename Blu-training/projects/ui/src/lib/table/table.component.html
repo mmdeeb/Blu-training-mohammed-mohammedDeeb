@@ -11,8 +11,8 @@
     </thead>
     <tbody>
         <tr *ngFor="let item of filteredRows |filter:generalFilter">
-            <td>{{ item.firstname}}</td>
-            <td>{{ item.lastname }}</td>
+            <td>{{ item.firstname | preRender:'uppercase'}}</td>
+            <td>{{ item.lastname | preRender:'lowercase'  }}</td>
             <td>{{ item.email }}</td>
         </tr>
     </tbody>

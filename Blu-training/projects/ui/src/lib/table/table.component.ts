@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FilterPipe } from 'pipes';
+import { FilterPipe,PreRenderPipe } from 'pipes';
 import { TableConfig } from './models/table-config';
 import { FormsModule } from '@angular/forms';
 
@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css'],
-  imports: [CommonModule,FormsModule,FilterPipe]
+  imports: [CommonModule,FormsModule,FilterPipe,PreRenderPipe]
 })
 export class TableComponent implements OnInit {
 
