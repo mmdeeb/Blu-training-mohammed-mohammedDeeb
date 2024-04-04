@@ -57,9 +57,8 @@
 }
 
 
-/* Hover effect on table body rows */
 .table tbody tr:hover {
-  background-color: #d1e6dd; /* Change this color to your preferred hover color for rows */
+  background-color: #d1e6dd;
 }
 
 /* Responsive design adjustments */
