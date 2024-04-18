@@ -1,1 +1,5 @@
-<ui-table [config]="tableData"> </ui-table>
+<ui-table [config]="tableData" [cellTemplate]="customCellTemplate"></ui-table>
+
+<ng-template #customCellTemplate let-value>
+    <button>{{ value }}</button>
+</ng-template>
