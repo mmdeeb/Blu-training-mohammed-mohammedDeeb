@@ -12,9 +12,9 @@ export class DataToTableService {
     const data: TableConfig = {
       columns: ['Firstname', 'Lastname', 'Email'],
       rows: [
-        { firstname: 'John', lastname: 'Doe', email: 'john@example.com' },
-        { firstname: 'Mary', lastname: 'Moe', email: 'mary@example.com' },
-        { firstname: 'July', lastname: 'Dooley', email: 'july@example.com' }
+        { Firstname: 'John', Lastname: 'Doe', Email: 'john@example.com' },
+        { Firstname: 'Mary', Lastname: 'Moe', Email: 'mary@example.com' },
+        { Firstname: 'July', Lastname: 'Dooley', Email: 'july@example.com' }
       ]
     };
 
