@@ -1,5 +1,23 @@
 <ui-table [config]="tableData" [cellTemplate]="customCellTemplate"></ui-table>
 
-<ng-template #customCellTemplate let-value>
-    <button>{{ value }}</button>
+<ng-template #customCellTemplate let-value let-column="column">
+    <button class="cell-button " (click)="onCellClick(value, column)">{{ value }}</button>
 </ng-template>
+
+<ng-container *ngIf="displayEmailModal">
+  <div class="modal-background" (click)="closeEmailModal()"></div>
+  <div class="modal-content">
+    <h2>Send Email</h2>
+    <p>To: {{ emailToBeSentTo }}</p>
+    <textarea [(ngModel)]="emailContent" placeholder="Write your email here..."></textarea>
+    <button (click)="sendEmail()">Send</button>
+    <button class="cancel-button" (click)="closeEmailModal()">Cancel</button>
+  </div>
+</ng-container>
+<ng-container *ngIf="displayWelcomeModal">
+    <div class="modal-background" (click)="closeWelcomeModal()"></div>
+    <div class="modal-content">
+      <h2>Welcome {{name}}!</h2>
+      <button class="cancel-button" (click)="closeWelcomeModal()">Cancel</button>
+    </div>
+  </ng-container>

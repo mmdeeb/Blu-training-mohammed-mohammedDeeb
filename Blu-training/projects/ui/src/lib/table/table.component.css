@@ -56,11 +56,6 @@
   box-shadow: 0 0 3px #5b9bd5;
 }
 
-
-.table tbody tr:hover {
-  background-color: #d1e6dd;
-}
-
 /* Responsive design adjustments */
 @media (max-width: 768px) {
     .filter-container input {
