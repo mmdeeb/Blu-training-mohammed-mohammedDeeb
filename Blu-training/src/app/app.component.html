@@ -9,7 +9,7 @@
   <div class="modal-content">
     <h2>Send Email</h2>
     <p>To: {{ emailToBeSentTo }}</p>
-    <textarea [(ngModel)]="emailContent" placeholder="Write your email here..."></textarea>
+    <textarea [(ngModel)]="emailContent" placeholder="Write your email here... (This email will print in console)"></textarea>
     <button (click)="sendEmail()">Send</button>
     <button class="cancel-button" (click)="closeEmailModal()">Cancel</button>
   </div>
